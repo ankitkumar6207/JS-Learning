@@ -20,11 +20,12 @@ const temperature = 41
 
 // console.log(`User power: ${power}`);
 
-
+//short hand 
 // const balance = 1000
+// if (balance > 500) console.log("test"),console.log("test2"); //not recomended
 
-// if (balance > 500) console.log("test"),console.log("test2");
 
+///nesting 
 // if (balance < 500) {
 //     console.log("less than 500");
 // } else if (balance < 750) {

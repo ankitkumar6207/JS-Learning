@@ -1,3 +1,5 @@
+//used in redux 
+
 // switch (key) {
 //     case value:
         
@@ -7,6 +9,8 @@
 //         break;
 // }
 
+
+// if any case is correct and you dont use break then it will execute everything after that witout even checking the case excet default z
 const month = "march"
 
 switch (month) {

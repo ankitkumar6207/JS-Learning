@@ -6,16 +6,21 @@
 //     return item
 // } )
 
-// console.log(values);
+console.log(values); // for each loop will not return anything so undefined will come 
+
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-// const newNums = myNums.filter( (num) => {
+// filter return values , for each doesnt return any value 
+const newNums = myNums.filter((nums) => nums>4) // single value in call back without {}
+// const newNums = myNums.filter( (num) => { // here i need to write return because {} is used means scope is created 
 //     return num > 4
 // } )
 
-// const newNums = []
+console.log(newNums);
 
+
+// doing the same thing using for each 
+// const newNums = []
 // myNums.forEach( (num) => {
 //     if (num > 4) {
 //         newNums.push(num)
@@ -39,6 +44,8 @@ const books = [
 
   let userBooks = books.filter( (bk) => bk.genre === 'History')
 
+  console.log(userBooks);
+  
   userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
 })

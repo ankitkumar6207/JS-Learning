@@ -1,4 +1,5 @@
-// for of
+// for of loop 
+// array specific loops are : for each and for in 
 
 // ["", "", ""]
 // [{}, {}, {}] // array of objects
@@ -14,7 +15,9 @@ for (const greet of greetings) {
     //console.log(`Each char is ${greet}`)
 }
 
-// Maps
+
+
+// Maps : map stores values in key value pair and it will never store duplicate values, and the order will be intact
 
 const map = new Map()
 map.set('IN', "India")
@@ -25,15 +28,20 @@ map.set('IN', "India")
 
 // console.log(map);
 
+// for of loop will work with maps but will not work with objects for objects we have for in loop 
+
 for (const [key, value] of map) {
-    // console.log(key, ':-', value);
+    console.log(key, ':-', value);
 }
+
+
 
 const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
 }
 
+// this will give error
 // for (const [key, value] of myObject) {
 //     console.log(key, ':-', value);
     
