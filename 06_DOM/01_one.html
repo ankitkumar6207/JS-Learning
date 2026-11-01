@@ -1,3 +1,97 @@
+console.log(window) // in inspect, window is an object which consists alot of things -> go to document 
+
+console.log(window.document) or console.log(docuement) //same 
+console.dir(document) // just to see everything about document
+
+
+element selectors using class and ids 
+document.getElementById("title")
+document.getElementById("title").id 
+document.getElementById("title").class //error , will give undefined 
+document.getElementById("title").className // wil give you the className 
+document.getElementById("title").getAttribute('id')
+document.getElementById("title").getAttribute('class')
+document.getElementById("title").setAttribute('class','test') / it will overwrite the revious attribute 
+document.getElementById("title").setAttribute('class','test heading') / it will overwrite so add the revoious attribute also 
+const title = document.getElementById("title")
+title.style.backgroundColour = 'green'
+title.style.color =red
+title.style.padding = '15px'
+
+we found that how can we see the attributes like class and ids 
+
+now we will be seeing how we can fetch text using the document.getElementById 
+
+all three will give you the text value
+title.innerText() this will give you the text which are in frontend , if any content is hiddent it wont come 
+title.textContent()  this will show the comlete text wheather that is hidden or not (display - none) will not impact anything
+title.innerHTML()  this will give you entire html with that id , not only the text , hence while setting it you need to give the tags also 
+
+getElementByCLassName is similar as ID 
+
+query selectors which we will use actually in the develoment
+it will support all css selector 
+1. document.querySelector('h1') // give only the first h1 element 
+2. document.querySelector('#title')
+3. document.querySelector('.heading')
+4. document.querySelector('input[type == "password"]')
+4. document.querySelector('p:firstChild')
+
+change the color of ul , list one and change the content to five 
+query selector will give you only one value then you need to save somewhere and then select it again to give some values 
+
+document.querySelectorAll('li')
+will give you all the li items in nodeList 
+
+nodelist and html collections are not pure array 
+every time you get something as array then check properties , you will see the for each but wont see the map, anc because array is having map by default thats why you are able to apply map with array 
+
+
+const tempLiList = document.querySelectorAll('li')
+tempLiList[0].style.color = 'green'
+tempLiList.forEach(function (l){
+    l.style.backgroundColor = 'green'
+})
+
+queryselectorall will always give you the result in nodelist where you always need to define the index , then queryselector you will get the result directly 
+
+
+const h1el = document.querySelectorAll('h1')
+h1el[0].style.color = 'pink'
+
+try to use for each loop with node list because you cant use map with this , but if you want to apply map then convert nodelist to array then do it 
+
+
+id selector will give you only one item because only one id is used with one element then queryselector will also give you value in one element then queryselectorall will give you node list 
+getelementbyclassName will give you html collection because multiple element can have same class name 
+
+const tempclassList = document.getElementByClassName('list-item')//classselector willgive you the value in html collection, but it doesnt have for each loop so we need to convert this into array 
+it doesnt have any for each loop things so we cant apply 
+
+myconvertetArray = Array.from(tempclassList)
+
+myconvertedArray.forEach(function(li){
+  li.style.color = 'orange'
+})
+
+selecting all h2 of a web page 
+myH2 = document.querySelectorAll('H2')
+myH2.forEach(function(h){
+    h.style.color ='red';
+    h.style.backgroundcolor = 'blue';
+    h.style.padding = '10px';
+    h.innerText = 'Ankit'
+})
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
